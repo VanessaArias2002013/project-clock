@@ -1,23 +1,21 @@
 <ion-app>
+  <ion-header>
+    <ion-toolbar color="">
+      <ion-title>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Clock
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-      <!-- Muestra la hora actual -->
-
-<ion-content class="ion-padding">
-  <ion-card>
-    <ion-card-header>
-      Hora Actual
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label>{{ currentTime }}</ion-label>
-    </ion-card-content>
-  </ion-card>
-</ion-content>
+  <ion-content class="ion-padding">
+    <ion-card class="watch-card">
+      <ion-card-header>
+        <ion-title class="ion-text-center">Hora Actual</ion-title>
+      </ion-card-header>
+      <ion-card-content class="ion-text-center">
+        <div class="watch-face">
+          <ion-label class="clock">{{ currentTime }}</ion-label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
 </ion-app>
