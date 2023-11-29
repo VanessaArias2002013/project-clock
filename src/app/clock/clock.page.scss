@@ -1,35 +1,77 @@
-.watch-card {
-    background-color: #333;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-  }
-  
-  .watch-face {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    background-image: url('https://thumbs.dreamstime.com/b/flor-grande-en-colores-pastel-97508652.jpg'); 
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-top: 20px;
+/* global.scss */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ion-content {
+    background-color: #050112;
+    color: #fff;
     display: flex;
-    align-items: center;
     justify-content: center;
-  }
-  
-  .clock {
-    font-size: 2em; 
-    font-weight: bold;
-    color: #333;
-    font-family: 'Arial', sans-serif; 
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  }
-  
-  
-  ion-header {
-    ion-toolbar {
-      --background: #3880ff;
-    }
-  }
-  
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+ion-content::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 220px;
+    height: 200px;
+    background-color: rgb(6, 31, 121);
+    filter: blur(80px);
+    z-index: -100;
+}
+
+ion-content::after {
+    content: "";
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 220px;
+    height: 200px;
+    background-color: rgb(52, 72, 145);
+    filter: blur(80px);
+    z-index: -100;
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ion-card.watch-card {
+  width: 800px;
+  height: 200px;
+  padding: 20px;
+  box-shadow: 0 0 40px rgba(80, 66, 232, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  border: 0.5px solid #fff; 
+  border-radius: 10px; 
+  margin-top: 80px; 
+}
+
+
+ion-card.watch-card ion-card-header ion-title {
+    font-size: 23px;
+    font-weight: 500;
+    padding: 0 5px;
+    color: #fff;
+}
+
+ion-card.watch-card ion-card-content ion-label.clock {
+    font-size: 50px;
+    filter: drop-shadow(0 0 3px cornflowerblue);
+    color: #fff;
+}
+
