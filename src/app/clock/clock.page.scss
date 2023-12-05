@@ -1,5 +1,4 @@
 /* global.scss */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 *,
 *::after,
@@ -10,7 +9,6 @@
 }
 
 ion-content {
-    background-color: #050112;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -19,59 +17,107 @@ ion-content {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     position: relative;
+    
 }
 
-ion-content::before {
-    content: "";
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    width: 220px;
-    height: 200px;
-    background-color: rgb(6, 31, 121);
-    filter: blur(80px);
-    z-index: -100;
-}
-
+ion-content::before,
 ion-content::after {
     content: "";
     position: absolute;
-    bottom: 50px;
-    right: 50px;
     width: 220px;
     height: 200px;
-    background-color: rgb(52, 72, 145);
     filter: blur(80px);
     z-index: -100;
+}
+
+ion-content::before {
+    top: 5vw;
+    left: 5vw;
+    background-color: rgb(6, 31, 121);
+}
+
+ion-content::after {
+    bottom: 5vw;
+    right: 5vw;
+    background-color: rgb(52, 72, 145);
 }
 
 .body-container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-ion-card.watch-card {
-  width: 800px;
-  height: 200px;
-  padding: 20px;
-  box-shadow: 0 0 40px rgba(80, 66, 232, 0.5);
-  background: rgba(0, 0, 0, 0.5);
-  border: 0.5px solid #fff; 
-  border-radius: 10px; 
-  margin-top: 80px; 
+    flex-wrap: wrap;
 }
 
+ion-card.watch-card {
+    width: 90%; 
+    max-width: 800px; 
+    height: 200px;
+    padding: 20px;
+    box-shadow: 0 0 40px rgba(80, 66, 232, 0.5);
+    border: 0.5px solid #fff;
+    border-radius: 10px;
+    margin-top: 5vw; 
+    margin-right: 1vw;
+    margin-left: 1vw; 
+    position: relative;
+}
+
+ion-card.watch-card:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.altonivel.com.mx/wp-content/uploads/2019/05/centro-historico.jpg') no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+ion-card.watch-card:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://th.bing.com/th/id/R.8f7048c1be8eedc1211e74533e87c1bc?rik=qXoSub1AwDyrSg&riu=http%3a%2f%2fcdn.travelpulse.com%2fimages%2f99999999-9999-9999-9999-999999999999%2f3f932a8c-b428-e611-8b9f-0050568e420d%2f630x355.jpg&ehk=NtwaHn2lLMVBD0b6W1R93voZhxsuu5cQmrb8pFnDs%2fc%3d&risl=&pid=ImgRaw&r=0') no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+ion-card.watch-card:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://th.bing.com/th/id/R.cd19cc6b8c653282289536ad37f8ca2d?rik=Drz2eQhmqL8pdg&pid=ImgRaw&r=0') no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 10px;
+    z-index: -1;
+}
 
 ion-card.watch-card ion-card-header ion-title {
-    font-size: 23px;
+    font-size: 4vw;
     font-weight: 500;
     padding: 0 5px;
     color: #fff;
 }
 
 ion-card.watch-card ion-card-content ion-label.clock {
-    font-size: 50px;
+    font-size: 8vw;
     filter: drop-shadow(0 0 3px cornflowerblue);
     color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+    ion-card.watch-card {
+        width: 90%;
+        margin-top: 3vw;
+    }
+}

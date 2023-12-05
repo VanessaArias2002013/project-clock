@@ -1,22 +1,46 @@
-<ion-app>
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title class="ion-text-center"></ion-title>
+<ion-content class="ion-padding">
+  <div class="background-image"></div>
+    <ion-header>
+    <ion-toolbar>
+      <ion-title class="ion-text-center">Horas de México</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content class="ion-padding">
-    <div class="body-container">
-      <ion-card class="watch-card">
-        <ion-card-header>
-          <ion-title class="ion-text-center">Hora Actual</ion-title>
-        </ion-card-header>
-        <ion-card-content class="ion-text-center">
-          <div class="watch-face">
-            <ion-label class="clock">{{ currentTime }}</ion-label>
-          </div>
-        </ion-card-content>
-      </ion-card>
-    </div>
-  </ion-content>
-</ion-app>
+  <div class="body-container">
+    <!-- Tarjeta para la primera API -->
+    <ion-card class="watch-card">
+      <ion-card-header>
+        <ion-title class="ion-text-center">Hora del Centro</ion-title>
+      </ion-card-header>
+      <ion-card-content class="ion-text-center">
+        <div class="watch-face">
+          <ion-label class="clock">{{ currentTimes[0] }}</ion-label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Tarjeta para la segunda API -->
+    <ion-card class="watch-card">
+      <ion-card-header>
+        <ion-title class="ion-text-center">Hora del Norte</ion-title>
+      </ion-card-header>
+      <ion-card-content class="ion-text-center">
+        <div class="watch-face">
+          <ion-label class="clock">{{ currentTimes[1] }}</ion-label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Tarjeta para la tercera API -->
+    <ion-card class="watch-card">
+      <ion-card-header>
+        <ion-title class="ion-text-center">Hora del Sur</ion-title>
+      </ion-card-header>
+      <ion-card-content class="ion-text-center">
+        <div class="watch-face">
+          <ion-label class="clock">{{ currentTimes[2] }}</ion-label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
